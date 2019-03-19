@@ -95,7 +95,7 @@ if (!isset($_SESSION['user'])){
                                                 
                                             <div class="form-group form-check">
                                                 <input name="checkBoxPrivate" type="checkbox" class="form-check-input" id="checkbox-private">
-                                                <label class="form-check-label" for="checkbox-private">Prywatne</label>
+                                                <label class="form-check-label" for="checkbox-private">Private</label>
                                             </div>
                                             <button name="submit" type="submit" class="btn btn-dark">UPLOAD</button>
                                             

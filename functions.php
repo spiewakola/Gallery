@@ -6,11 +6,24 @@ function redirectWithMessage($message, $pageName){
     
 }
 
+// function getDB(){
+//     $host = '127.0.0.1'; //localhost
+//     $db   = 'gallery';
+//     $user = 'root';
+//     $pass = '';
+//     $charset = 'utf8';
+
+//     $connectionDetails = "mysql:host=$host;dbname=$db;charset=$charset";
+
+//     $pdo = new PDO($connectionDetails, $user, $pass);
+//     return $pdo;
+// }
+
 function getDB(){
     $host = '127.0.0.1'; //localhost
-    $db   = 'gallery';
-    $user = 'root';
-    $pass = '';
+    $db   = 'spiewako_galeria';
+    $user = 'spiewako_galeria';
+    $pass = 'Magazyn1234567!';
     $charset = 'utf8';
 
     $connectionDetails = "mysql:host=$host;dbname=$db;charset=$charset";

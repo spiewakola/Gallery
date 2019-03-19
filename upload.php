@@ -1,9 +1,7 @@
 <?php
 session_start();
 require_once "functions.php";
-echo "<pre>";
-print_r($_SESSION);
-echo "</pre>";
+
 if(isset($_POST['imageTitle']) && isset($_POST['imageDesciption']) && isset($_FILES['uploadFile'])){
     $target_dir = "uploads/";
     $file=$_FILES["uploadFile"];
@@ -46,16 +44,11 @@ if(isset($_POST['imageTitle']) && isset($_POST['imageDesciption']) && isset($_FI
             $isPrivate = (isset($_POST['checkBoxPrivate']))?1:0;
             $result = $query->execute([$_POST['imageTitle'], $_POST['imageDesciption'],$target_file,$_SESSION['user']['id'],$isPrivate]);   
             if($result){
-                echo"Gratulacje! Zdjęcie zostało poprawnie zapisane";
+                redirectWithMessage('zdjęcie zostało dodane','gallery.php');
             }else{
-                echo"Niestety! Nie udało się zapisać zdjęcia do bazy danych";
+                redirectWithMessage('zdęcie niestety nie zostało dodane','gallery.php');
             }
-        } else {
-            echo "Niestety nie udało się dodać zdjęcia.";
+
+
+
         }
-    }       
-}else{
-        echo "Uzupełnij wszystkie pola";
-
-}
-

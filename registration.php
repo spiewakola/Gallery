@@ -38,7 +38,7 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])&
                     if (strlen($_POST['password'])>=8 ){
                     $result= addUserToDatabase();
                         if ($result == true){
-                        redirectWithMessage('ok','signin.php');
+                        redirectWithMessage('ok','gallery.php');
                         
                 
             }else{
