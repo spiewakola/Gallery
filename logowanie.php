@@ -12,7 +12,8 @@ function checkUserFromDatabase(){
         $query = $db->prepare("SELECT id, name FROM users WHERE email=? AND password=?");
         $query->execute([$email, $password]); 
         return $query->fetch(PDO::FETCH_ASSOC);
-
+    }
+}
 
 $databeaseResult = checkUserFromDatabase();
 if ($databeaseResult == NULL){
@@ -22,11 +23,4 @@ if ($databeaseResult == NULL){
         'id' => $databeaseResult['id']
     ];
     redirectWithMessage('login and password correct','gallery.php');
-
 } 
-
-
-
-
-
-   
