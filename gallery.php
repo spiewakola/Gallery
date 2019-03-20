@@ -110,15 +110,7 @@ if (!isset($_SESSION['user'])){
                     </div>
                     </div>
                 
-                <?php
-                //usuwanie zdjęć
-                //przekierowywania
-                // jeśli użytkownik jest zalogowany nie moze sie ponownie zalogować
-                
-                
-                
-                ?>
-            
+              
 
         </div>
 

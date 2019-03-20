@@ -42,20 +42,20 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])&
                         
                 
             }else{
-                redirectWithMessage('coś poszło nie tak','createAccount.php');
+                redirectWithMessage('something wants wrong','createAccount.php');
             }
         }else{
-            redirectWithMessage('hasło musi być większe niż 8 znaków','createAccount.php');
+            redirectWithMessage('passwors should contains more than 8 chars','createAccount.php');
         }
         }else{
             
-            redirectWithMessage('podany email istnieje w bazie','createAccount.php');
+            redirectWithMessage('this mail already exist in database','createAccount.php');
         }
        }else{
-        redirectWithMessage('hasła nie są identyczne','createAccount.php');
+        redirectWithMessage('passwords are different','createAccount.php');
         }
     }else{
-        redirectWithMessage('formularz wypełniony nieprawidłowo','createAccount.php');
+        redirectWithMessage('fill all inputes','createAccount.php');
     }
 
 }

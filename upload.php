@@ -44,11 +44,10 @@ if(isset($_POST['imageTitle']) && isset($_POST['imageDesciption']) && isset($_FI
             $isPrivate = (isset($_POST['checkBoxPrivate']))?1:0;
             $result = $query->execute([$_POST['imageTitle'], $_POST['imageDesciption'],$target_file,$_SESSION['user']['id'],$isPrivate]);   
             if($result){
-                redirectWithMessage('zdjęcie zostało dodane','gallery.php');
+                redirectWithMessage('OK','gallery.php');
             }else{
-                redirectWithMessage('zdęcie niestety nie zostało dodane','gallery.php');
+                redirectWithMessage('something wrong','gallery.php');
             }
-
-
-
         }
+    }
+}
